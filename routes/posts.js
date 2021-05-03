@@ -12,9 +12,9 @@ const postsRouter = express.Router();
 
 // post
 // -- post
-postsRouter.get('/post/posts', getPosts);
-postsRouter.get('/post/:id', getPostView);
-postsRouter.post('/post/:id', auth, createPost);
+postsRouter.get('/post/posts', auth, getPosts);
+postsRouter.get('/post/', auth, getPostView);
+postsRouter.post('/post/', auth, createPost);
 postsRouter.delete('/post/:id', auth, deletePost);
 // -- comments
 postsRouter.get('/post/comment/:id', auth, getComments);
@@ -26,6 +26,7 @@ postsRouter.put('/post/reaction/:id', auth, putReaction);
 postsRouter.delete('/post/reaction/:id', auth, deleteReaction);
 
 // posts
-postsRouter.get('/', getPostsView);
+postsRouter.get('/', auth, getPostsView);
+
 
 module.exports = postsRouter;

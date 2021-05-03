@@ -12,11 +12,19 @@ User.init({
   },
   email: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false,
+    validate: {
+      isEmail: true
+    },
+    unique: true
   },
   password: {
     type: DataTypes.STRING,
-    allowNull: false
+    allowNull: false,
+  },
+  isVerified: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false,
   }
 }, {
   sequelize,

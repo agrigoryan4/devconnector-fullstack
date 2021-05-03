@@ -24,7 +24,7 @@ Comment.init({
   timestamps: false
 });
 
-Comment.belongsTo(Post, { foreignKey: 'postId', targetKey: 'postId' });
-Comment.belongsTo(User, { foreignKey: 'authorId', targetKey: 'id' });
+Comment.belongsTo(Post, { foreignKey: 'postId' });
+Comment.belongsTo(User, { foreignKey: 'authorId' });
 
 module.exports = Comment;

@@ -21,5 +21,4 @@ accountRouter.post('/register', alreadyAuthorized, register);
 accountRouter.get('/recovery', alreadyAuthorized, getRecoveryView);
 accountRouter.post('/recovery', alreadyAuthorized, recovery);
 
-
 module.exports = accountRouter;

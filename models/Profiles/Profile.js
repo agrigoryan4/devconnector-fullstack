@@ -45,6 +45,6 @@ Profile.init({
   timestamps: false
 })
 
-Profile.belongsTo(User, { foreignKey: 'userId', targetKey: 'id' });
+Profile.belongsTo(User, { foreignKey: 'userId' });
 
 module.exports = Profile;

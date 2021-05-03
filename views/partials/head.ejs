@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://kit.fontawesome.com/d47c8048e0.js" crossorigin="anonymous"></script>
+    <title><%= title %></title>
+  </head>
+  <body>
+    <nav class="navbar bg-dark">
+      <h1>
+          <a href="/dashboard">
+              <i class="fas fa-code"></i> DevConnector
+          </a>
+      </h1>
+      <ul>
+          <% if(included.developers) { %>
+            <li>
+                <a href="/profiles/developers">Developers</a>
+            </li>
+          <% } %>
+          <% if(included.login) { %>
+            <li>
+              <a href="/account/login">Login</a>
+            </li>
+          <% } %>
+          <% if(included.register) { %>
+            <li>
+                <a href="/account/register">Register</a>
+            </li>
+          <% } %>
+          <% if(included.posts) { %>
+            <li>
+              <a href="/posts/">Posts</a>
+            </li>
+          <% } %>
+          <% if(included.dashboard) { %>
+            <li>
+                <a href="/dashboard">
+                    <i class="fas fa-user"></i>
+                    <span class="hide-sm">Dashboard</span>
+                </a>
+            </li>
+          <% } %>
+          <% if(included.logout) { %>
+            <li>
+              <a href="/">
+                  <i class="fas fa-sign-out-alt"></i>
+                  <span class="hide-sm"> Logout</span>
+              </a>
+          </li>
+          <% } %>
+      </ul>
+    </nav>

@@ -19,6 +19,6 @@ Skill.init({
   timestamps: false
 })
 
-Skill.belongsTo(Profile, { foreignKey: 'profileId', targetKey: 'profileId' });
+Skill.belongsTo(Profile, { foreignKey: 'profileId' });
 
 module.exports = Skill;

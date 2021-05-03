@@ -5,6 +5,6 @@ const { confirmEmail } = require('../controllers/confirmEmail');
 const confirmEmailRouter = express.Router();
 
 // confirmEmail
-confirmEmailRouter.post('/', confirmEmail);
+confirmEmailRouter.get('/', confirmEmail);
 
 module.exports = confirmEmailRouter;

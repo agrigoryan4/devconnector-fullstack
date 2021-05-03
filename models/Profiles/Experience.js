@@ -43,6 +43,6 @@ Experience.init({
   timestamps: false
 })
 
-Experience.belongsTo(Profile, { foreignKey: 'profileId', targetKey: 'profileId' });
+Experience.belongsTo(Profile, { foreignKey: 'profileId' });
 
 module.exports = Experience;

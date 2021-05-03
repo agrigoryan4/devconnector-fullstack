@@ -23,6 +23,6 @@ SocialLink.init({
   timestamps: false
 })
 
-SocialLink.belongsTo(Profile, { foreignKey: 'profileId', targetKey: 'profileId' });
+SocialLink.belongsTo(Profile, { foreignKey: 'profileId' });
 
 module.exports = SocialLink;

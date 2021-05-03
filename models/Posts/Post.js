@@ -25,6 +25,6 @@ Post.init({
   timestamps: false
 });
 
-Post.belongsTo(User, { foreignKey: 'authorId', targetKey: 'id' });
+Post.belongsTo(User, { foreignKey: 'authorId' });
 
 module.exports = Post;

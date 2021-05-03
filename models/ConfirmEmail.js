@@ -32,6 +32,6 @@ ConfirmEmail.init({
   timestamps: false
 });
 
-ConfirmEmail.belongsTo(User, { foreignKey: 'userId', targetKey: 'id'});
+ConfirmEmail.belongsTo(User, { foreignKey: 'userId' });
 
 module.exports = ConfirmEmail;

@@ -43,6 +43,6 @@ Education.init({
   timestamps: false
 })
 
-Education.belongsTo(Profile, { foreignKey: 'profileId', targetKey: 'profileId' });
+Education.belongsTo(Profile, { foreignKey: 'profileId' });
 
 module.exports = Education;

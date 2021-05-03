@@ -24,7 +24,7 @@ Reaction.init({
   timestamps: false
 });
 
-Reaction.belongsTo(Post, { foreignKey: 'postId', targetKey: 'postId' });
-Reaction.belongsTo(User, { foreignKey: 'authorId', targetKey: 'id' });
+Reaction.belongsTo(Post, { foreignKey: 'postId' });
+Reaction.belongsTo(User, { foreignKey: 'authorId' });
 
 module.exports = Reaction;
